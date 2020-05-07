@@ -49,15 +49,14 @@ export default
           @getStatus()
         .catch console.error
     getList: ->
-      Sta
-        .get url: "#{Sta.baseUrl}/scan"
-        .then (res) =>
-          @list = []
-          for i in res.sort()
-            @list.push
-              value: i
-              text: i
-      .catch console.error
+      try
+        @list = []
+        for await i from Sta.iterAll url: "#{Sta.baseUrl}/scan"
+          @list.push
+            value: i
+            text: i
+      catch e
+        console.error e
   mounted: ->
     @getStatus()
     @getList()
