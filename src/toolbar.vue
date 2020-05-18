@@ -1,7 +1,7 @@
 <template>
   <v-toolbar color='primary' dark>
     <v-toolbar-title class='white--text'>
-      UART
+      PWM
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-menu bottom left>
@@ -26,7 +26,7 @@ export default
   data: ->
     more: mdiDotsVertical
     actions:
-      uart: 'UART'
+      pwm: 'PWM'
       system: 'System'
   methods:
     click: (action) ->

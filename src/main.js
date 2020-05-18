@@ -9,9 +9,9 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 const router = new VueRouter({
   routes: [
-    {path: '/uart', component: require('./uart').default},
+    {path: '/pwm', component: require('./pwm').default},
     {path: '/system', component: require('./system').default},
-    {path: '*', redirect: '/uart'}
+    {path: '*', redirect: '/pwm'}
   ]
 })
 
