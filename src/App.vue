@@ -11,7 +11,8 @@
 
 <script lang='coffee'>
 import Vue from 'vue'
-Vue.use require('vuelidate').default
+import Vuelidate from 'vuelidate'
+Vue.use Vuelidate
 
 export default
   components:
