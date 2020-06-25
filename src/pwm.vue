@@ -26,7 +26,7 @@ export default
   components:
     card: require('./card').default
   data: ->
-    pin: 0
+    pin: 2
     curr: 0
     # boot settings
     duty: 0
